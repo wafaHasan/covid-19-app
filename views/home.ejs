@@ -1,0 +1,13 @@
+<%- include('./layout/header') %>
+
+<div>
+<h2>Total cases: <%=confirm%></h2>
+<h2>Total recovered: <%=recovered%></h2>
+
+<form action="/formresult" method="POST">
+country: <input type="text" name="country">
+date: <input type="date" name="date">
+<button type="submit">Search</button>
+</form>
+</div>
+<%- include('./layout/footer') %>

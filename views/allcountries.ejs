@@ -1,0 +1,21 @@
+
+<%- include('./layout/header') %>
+<% data.forEach(data=>{ %>
+ <div>
+     <h2><%= data.country%></h2>
+     <p><%= data.confirmed%></p>
+     <p><%= data.deathes%></p>
+     <p><%= data.recovered%></p>
+     <h3><%= data.date%></h3>
+     <form action="/addtodb" method="POST">
+        <input type="hidden" name="country" value="<%= data.country%>">
+        <input type="hidden" name="confirmed" value="<%= data.confirmed%>">
+        <input type="hidden" name="deathes" value="<%= data.deathes%>">
+        <input type="hidden" name="recovered" value="<%= data.recovered%>">
+        <input type="hidden" name="date" value="<%= data.date%>">
+        <button type="submit"> add to my records </button>
+        </form>
+ </div>
+<% }) %>
+
+<%- include('./layout/footer') %>

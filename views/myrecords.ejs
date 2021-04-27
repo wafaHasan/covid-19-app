@@ -1,0 +1,15 @@
+
+<%- include('./layout/header') %>
+<% data.forEach(data=>{ %>
+ <div>
+     <h2><%= data.country%></h2>
+     <p><%= data.confirmed%></p>
+     <p><%= data.deathes%></p>
+     <p><%= data.recovered%></p>
+     <h3><%= data.date%></h3>
+
+     <a href="/recordsdetails/<%=data.id%>"> view details </a>
+ </div>
+<% }) %>
+
+<%- include('./layout/footer') %>

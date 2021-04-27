@@ -1,0 +1,14 @@
+main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+div{
+    width: fit-content;
+    height: fit-content;
+    margin: 2%;
+    padding: 1%;
+    text-align: center;
+    border: 2px solid aqua;
+}

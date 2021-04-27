@@ -1,0 +1,24 @@
+
+<%- include('./layout/header') %>
+<% data.forEach(data=>{ %>
+ <div>
+     <h2><%= data.country%></h2>
+     <p><%= data.confirmed%></p>
+     <p><%= data.deathes%></p>
+     <p><%= data.recovered%></p>
+     <h3><%= data.date%></h3>
+     <form action="/update/<%=data.id%>?_method=put" method="POST">
+        <input type="text" name="country" value="<%= data.country%>">
+        <input type="text" name="confirmed" value="<%= data.confirmed%>">
+        <input type="text" name="deathes" value="<%= data.deathes%>">
+        <input type="text" name="recovered" value="<%= data.recovered%>">
+        <input type="text" name="date" value="<%= data.date%>">
+        <button type="submit"> update </button>
+        </form>
+     <form action="/delete/<%=data.id%>?_method=delete" method="POST">
+        <button type="submit"> delete </button>
+        </form>
+ </div>
+<% }) %>
+
+<%- include('./layout/footer') %>

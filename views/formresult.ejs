@@ -1,0 +1,12 @@
+
+<%- include('./layout/header') %>
+<!-- (country, confirmed,deathes,recovered, date) -->
+<% data.forEach(data=>{ %>
+ <div>
+     <h2><%= data.country%></h2>
+     <p><%= data.confirmed%></p>
+     <h3><%= data.date%></h3>
+ </div>
+<% }) %>
+
+<%- include('./layout/footer') %>
